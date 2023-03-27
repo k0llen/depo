@@ -1,0 +1,334 @@
+.faq {
+    padding-top: 120px;
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__title {
+        margin-bottom: 32px;
+
+        &-block {
+            p {
+                color: #6F767E;
+                max-width: 222px;
+            }
+        }
+    }
+
+    &__accordeon {
+        max-width: 808px;
+
+        &-item {
+            padding: 24px 24px 23px 24px;
+            border-top: 1px solid #d9d9d9;
+            transition: .3s all;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 40px;
+                right: 30px;
+                width: 12.5px;
+                height: 2px;
+                background: #6F767E;
+                transition: .3s all;
+            }
+
+            &::before {
+                transform: rotate(90deg);
+            }
+
+            &:hover {
+                background: #F5F9FE;
+            }
+
+            &:last-child {
+                border-bottom: 1px solid #d9d9d9;
+            }
+
+            &-trigger {
+                font-size: 24px;
+                line-height: 32px;
+                cursor: pointer;
+                padding: 24px;
+                margin: -24px;
+            }
+
+            &-hidden {
+                max-height: 0;
+                overflow: hidden;
+                transition: .3s all;
+
+                p {
+                    color: #6F767E;
+                }
+            }
+
+            &--active {
+                .faq__accordeon-item-hidden {
+                    margin-top: 24px;
+                    max-height: none;
+                }
+            }
+
+            &--active.faq__accordeon-item::before {
+                opacity: 0;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:990px) {
+    .faq {
+        padding-top: 80px;
+
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__title {
+            margin: 0;
+        }
+
+        &__title-block {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: none;
+            width: 100%;
+            margin-bottom: 64px;
+
+            p {
+                margin-right: 18px;
+            }
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 728px) {
+    .faq {
+
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__title {
+            margin: 0;
+        }
+
+        &__title-block {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: none;
+            width: 100%;
+            margin-bottom: 64px;
+
+            p {
+                margin-right: 18px;
+            }
+        }
+
+        &__accordeon-item {
+
+            &:nth-child(2)::before,
+            &:nth-child(2)::after {
+                top: 54px;
+            }
+
+            &:last-child::before,
+            &:last-child::after {
+                top: 54px;
+            }
+
+            &-trigger {
+                max-width: 590px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .faq {
+        &__accordeon-item {
+            &-trigger {
+                max-width: 590px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .faq {
+        &__accordeon-item {
+            &:nth-child(5)::before,
+            &:nth-child(5)::after {
+                top: 54px;
+            }
+            &-trigger {
+                max-width: 500px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .faq {
+        &__accordeon-item {
+            &::before,
+            &::after {
+                top: 35px;
+            }
+            &:nth-child(2)::before,
+            &:nth-child(2)::after {
+                top: 35px;
+            }
+            &:nth-child(5)::before,
+            &:nth-child(5)::after {
+                top:35px;
+            }
+            &:last-child::before,
+            &:last-child::after {
+                top: 35px;
+            }
+            &-trigger {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:550px) {
+    .faq {
+        padding-top: 32px;
+
+        .wrapper {
+            padding: 0 16px;
+        }
+
+        &__title {
+            margin-bottom: 16px;
+            font-size: 24px;
+            line-height: 32px;
+
+            &-block {
+                flex-direction: column;
+                margin-bottom: 24px;
+
+                p {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        &__accordeon-item {
+            
+            &::before,
+            &::after {
+                top: 25px;
+            }
+            &:nth-child(2)::before,
+            &:nth-child(2)::after {
+                top: 25px;
+            }
+            &:nth-child(5)::before,
+            &:nth-child(5)::after {
+                top:25px;
+            }
+            &:last-child::before,
+            &:last-child::after {
+                top: 25px;
+            }
+
+            padding: 16px 8px 15px 8px;
+
+            &-trigger {
+                padding: 16px 8px;
+                margin: -16px -8px;
+            }
+
+            &-hidden {
+                p {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 493px){
+    .faq__accordeon-item {
+            
+        &:nth-child(2)::before,
+        &:nth-child(2)::after {
+            top: 40px;
+        }
+        &:last-child::before,
+        &:last-child::after {
+            top: 40px;
+        }
+
+        &-trigger {
+            max-width: 400px;
+        }
+
+        &-hidden {
+            p {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .faq__accordeon-item {
+
+        &-trigger {
+            max-width: 272px;
+        }
+        
+        &::before,
+        &::after {
+            top: 38px !important;
+            right: 12px;
+        }
+        &:nth-child(1):before,
+        &:nth-child(1):after,
+        &:nth-child(4):before,
+        &:nth-child(4):after {
+            top: 25px !important;
+        }
+
+
+
+        &-hidden {
+            p {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:321px) {
+    .faq__accordeon-item {
+
+        &-hidden {
+            p {
+                max-width: 270px;
+            }
+        }
+    }
+}

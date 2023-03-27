@@ -1,0 +1,307 @@
+.country {
+    padding-top: 120px;
+
+    &__wrapper {
+        position: relative;
+        padding-bottom: 120px;
+        border-bottom: 1px solid #d9d9d9;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        width: 157px;
+        background: #F5F9FE;
+        border-radius: 16px;
+        padding: 8px;
+
+        &-wrapper {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 65px;
+            width: 100%;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: .3s all;
+        box-sizing: border-box;
+
+        &:hover {
+            background: #FFFFFF;
+        }
+
+        &.active {
+            background: #FFFFFF;
+
+            p {
+                color: #000;
+            }
+        }
+
+        p {
+            color: #6F767E;
+        }
+    }
+
+    &__title {
+        margin-bottom: 32px;
+        max-width: 452px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__btn {}
+
+    &__pics-block {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        max-width: 1008px;
+        z-index: 1;
+    }
+
+    &__pic_desctop {
+        width: 100%;
+    }
+
+    &__pic_tablet {
+        display: none;
+        width: 100%;
+    }
+
+    &__pic_mobile {
+        display: none;
+        width: 100%;
+    }
+}
+
+.russia_svg,
+.belarus_svg,
+.ukraine_svg,
+.kazakhstan_svg,
+.turkey_svg {
+    opacity: .5;
+    transition: .3s all;
+}
+
+.russia {
+    &--active & {
+        background: #FFFFFF;
+    }
+
+    &--active &_svg {
+        opacity: 1;
+    }
+}
+
+.belarus {
+    &--active & {
+        background: #FFFFFF;
+    }
+
+    &--active &_svg {
+        opacity: 1;
+    }
+}
+
+.ukraine {
+    &--active & {
+        background: #FFFFFF;
+    }
+
+    &--active &_svg {
+        opacity: 1;
+    }
+}
+
+.kazakhstan {
+    &--active & {
+        background: #FFFFFF;
+    }
+
+    &--active &_svg {
+        opacity: 1;
+    }
+}
+
+.turkey {
+    &--active & {
+        background: #FFFFFF;
+    }
+
+    &--active &_svg {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 990px) {
+    .country {
+        padding-top: 80px;
+
+        &__wrapper {
+            padding-bottom: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-width: none;
+            width: 100%;
+            box-sizing: border-box;
+            justify-content: space-between;
+
+            &-wrapper {
+                order: 4;
+                margin: 0;
+                width: 100%;
+            }
+        }
+
+
+        &__item {
+            width: fit-content !important;
+        }
+
+        &__title {
+            max-width: 503px;
+            order: 1;
+        }
+
+        &__buttons {
+            margin-bottom: 64px;
+            order: 2;
+        }
+
+
+        &__pics-block {
+            position: static;
+            margin-bottom: 24px;
+            order: 3;
+        }
+
+        &__pic_desctop {
+            display: none;
+        }
+
+        &__pic_tablet {
+            display: block;
+        }
+
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .country {
+        &__list {
+            gap: 0;
+        }
+
+        &__list {
+            width: 700px;
+            padding: 8px 16px;
+            border-radius: 0;
+            gap: 0;
+            justify-content: flex-start;
+
+            &-wrapper {
+                margin-left: -24px;
+                margin-right: -24px;
+                width: calc(100% + 48px);
+                padding-right: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:550px) {
+    .country {
+        padding-top: 32px;
+
+        .wrapper {
+            padding: 0 16px;
+        }
+
+        &__wrapper {
+            padding-bottom: 36px;
+        }
+
+        &__list {
+            width: 648px;
+            padding: 8px 16px;
+            border-radius: 0;
+            gap: 0;
+            justify-content: flex-start;
+
+            &-wrapper {
+                margin-left: -16px;
+                margin-right: -16px;
+                width: calc(100% + 48px);
+                padding-right: 16px;
+            }
+        }
+
+        &__item {
+            width: fit-content !important;
+
+            p {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 24px;
+        }
+
+        &__buttons {
+            flex-direction: column;
+            align-items: stretch;
+            width: 100%;
+            margin-bottom: 32px;
+        }
+
+        &__btn {
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            width: 100%;
+        }
+
+        &__pics-block {
+            margin: 0 auto 32px;
+        }
+
+        &__pic_tablet {
+            display: none;
+        }
+
+        &__pic_mobile {
+            display: block;
+        }
+    }
+}

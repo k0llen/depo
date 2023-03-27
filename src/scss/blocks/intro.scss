@@ -1,0 +1,213 @@
+
+
+.intro {
+    padding-top: 74px;
+    padding-bottom: 24px;
+    background: #F5F9FE;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        >img {
+            object-fit: cover;
+            max-width: 600px;
+        }
+    }
+    
+    &__pic_mobile {
+        display: none;
+    }
+    
+    &__text {
+        margin-top: -31px;
+        >p{
+        padding-left: 32px;
+        background: url(../img/svg/file.svg) no-repeat left center;
+        color: #6F767E;
+        }
+    }
+    
+    &__title {
+        margin: 0 0 32px 0;
+        max-width: 540px;
+    }
+    
+    &__btn {
+        margin-bottom: 32px;
+    }
+    
+    &__bot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 48px;
+    }
+    
+    &__scroll {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        img {
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.08);
+            border-radius: 50%;
+        }
+        p {
+            color: #6F767E;
+        }
+    }
+    
+    &__media {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        p{
+            color: #6F767E;
+        }
+    }
+    
+    &__media-links {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        a{
+            text-decoration: none;
+            svg {
+                width: 40px;
+                height: 40px;
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.08);
+                border-radius: 50%;
+                border: 12px solid #FFFFFF;
+                fill: #3E8BF3;
+                transition: .3s all;
+            }
+            &:hover  svg {
+                background: #3E8BF3;
+                border-color: #3E8BF3;
+                color: #FFFFFF;
+                fill: #FFFFFF;
+            }
+            &:active svg {
+                background: #295DA2;
+                border-color:#295DA2;
+                fill: #FFFFFF;
+            }
+        }
+    
+    }
+}
+
+
+@media screen and (max-width: 1250px) {
+    .intro {
+        &__wrapper {
+            .intro__pic_desctop {
+                max-width: 500px;
+            }
+            .intro__title{
+                font-size: 56px;
+                line-height: 117%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .intro{
+        padding-top: 32px;
+        .wrapper {
+            padding: 0;
+        }
+        .wrapper__full{
+            padding: 0 24px;
+        }
+
+        &__wrapper {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 32px;
+            text-align: center;
+            .intro__pic_desctop {
+                max-width: 453px;
+            }
+            .intro__title{
+                font-size: 48px;
+                line-height: 56px;
+            }
+            p{
+                display: inline-block;
+            }
+        }
+    
+        &__text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0;
+            margin-left: 3px;
+        }
+    
+        &__title{
+            max-width: 677px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .intro{
+        padding-bottom: 32px;
+        .wrapper__full{
+            padding: 0 16px;
+        }
+
+        &__wrapper {
+            flex-direction: column;
+            gap: 40px;
+            .intro__title{
+                font-size: 32px;
+                line-height: 40px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 20px;
+                padding-left: 28px;
+                background: url(../img/svg/file-mobile.svg) no-repeat left center;
+            }
+        
+        }
+    
+        &__text {
+            margin: 0;
+        }
+    
+        &__title{
+            margin-bottom: 24px;
+        }
+    
+        &__btn {
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 24px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    
+        &__pic_desctop {
+            display: none;
+        }
+        
+        &__pic_mobile {
+            display: block;
+            max-width: none;
+            margin: 0 -16px;
+            margin-right: -10px;
+        }
+    
+        &__bot {
+            display: none;
+        }
+    
+    }
+
+}

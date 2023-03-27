@@ -1,0 +1,152 @@
+.trade {
+    padding-top: 120px;
+
+    &__wrapper {
+        padding-bottom: 120px;
+        border-bottom: 1px solid #d9d9d9;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 48px 24px;
+    }
+
+    &__top {
+        grid-column: span 3;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    &__title {
+        max-width: 450px;
+        margin: 0;
+    }
+    
+    &__btn_mobile {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__step {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    
+        h3 {
+            margin: 0;
+            font-size: 24px;
+            line-height: 32px;
+        }
+    
+        img+p {
+            padding: 4px 16px;
+            border-radius: 24px;
+        }
+    
+        h3+p {
+            color: #6F767E;
+        }
+    }
+    
+    &__step_1 {
+        img+p {
+            background: #DFD3F7;
+        }
+    }
+    
+    &__step_2 {
+        img+p {
+            background: #C0E1EE;
+        }
+    }
+    
+    &__step_3 {
+        img+p {
+            background: #D0E5C2;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 990px) {
+
+    .trade{
+        padding-top: 80px; 
+
+        &__wrapper {
+            grid-template-columns: repeat(2,1fr);
+            gap: 64px 26px;
+            padding-bottom: 64px;
+        }
+    
+        &__top{
+            grid-column: 1;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .trade{
+        padding-top: 32px;
+        .wrapper{
+            padding: 0 16px;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+            padding-bottom: 32px;
+        }
+    
+        &__step {
+            gap: 16px;
+            img {
+                margin-bottom: 8px;
+            }
+            img + p {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+            h3 + p {
+                font-size: 14px;
+                line-height: 20px;  
+            }
+        }
+    
+        &__step_3 {
+            gap: 24px;
+            img {
+                margin-bottom: 0;
+            }
+        }
+    
+        &__title{
+            font-size: 24px;
+            line-height: 32px;
+            max-width: 235px;
+        }
+    
+        &__top {
+            margin-bottom: -8px;
+        }
+    
+        &__btn {
+            display: none;
+        }
+    
+        &__btn_mobile{
+            display: block;
+        }
+    }
+}
