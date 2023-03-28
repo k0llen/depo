@@ -219,8 +219,8 @@
 				Страны, с которыми уже работает сервис
 			</h2>
 			<div class="country__buttons">
-				<a href="#!" class="btn__blue btn__medium country__btn">Launch app</a>
-				<a href="#!" class="btn__light-blue btn__medium country__btn">Подключить мою страну</a>
+				<a href="#!" class="btn__blue btn__medium country__btn callback--js">Launch app</a>
+				<a href="#!" class="btn__light-blue btn__medium country__btn country-callback--js">Подключить мою страну</a>
 			</div>
 			<div class="country__pics-block">
 				<svg class="country__pic_desctop" width="1009" height="568" viewBox="0 0 1009 568" fill="none"
@@ -3143,7 +3143,7 @@
 	</div>
 </footer>
 
-<div id="callback-modal" class="callback-modal modal">
+<!-- <div id="callback-modal" class="callback-modal modal">
 	<div class="modal__closed flex-center svg-contain" data-fancybox-close>
 		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M18.75 5.25L5.25 18.75" stroke="#6F767E" stroke-width="2" stroke-linecap="round"
@@ -3157,13 +3157,13 @@
 
 		</form>
 	</div>
-</div><!-- end callback-modal -->
+</div>-->
 
 <!-- Intro popup start-->
 <div id="intro_popup" class="intro__popup fz18" >
     <h2>Заголовок попапа</h2>
     <p>Широкий спектр услуг по торговле и управлению цифровыми активами для удовлетворения разнообразных торговых потребностей. </p>
-	<a href="#!" class="btn__blue btn__medium intro__popup-btn">Button</a>
+	<a href="#!" class="btn__blue btn__medium intro__popup-btn" data-fancybox-close>Button</a>
 	<div class="modal__closed flex-center svg-contain modal_close" data-fancybox-close>
 		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M18.75 5.25L5.25 18.75" stroke="#6F767E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -3172,6 +3172,58 @@
 	</div>
 </div>
 <!-- Intro popup end -->
+
+<!-- Country popup start -->
+<div class="country__popup" id="country_popup">
+	<form action="#!" class="country__popup-form">
+		<h2>Подключить мою страну</h2>
+		<div class="country__popup-block fz16">
+			<p>Выберите страну</p>
+			<div class="country__popup-dropdown fz18">
+				<button class="country__popup-dropdown-button">
+					Выберите страну
+				</button>
+				<ul class="country__popup-dropdown-list">
+					<li class="country__popup-dropdown-list-item" data-value="china">
+							Китай
+					</li>
+					<li class="country__popup-dropdown-list-item" data-value="Tajikistan">
+							Таджикистан
+					</li>
+					<li class="country__popup-dropdown-list-item" data-value="georgia">
+							Грузия
+					</li>
+					<li class="country__popup-dropdown-list-item" data-value="serbia">
+							Сербия
+					</li>
+				</ul>
+				<input type="text" name="select-category" value="" class="country__popup-dropdown-input-hidden" >
+			</div>
+		</div>
+		<div class="country__popup-block fz16">
+			<p>Имя</p>
+			<input type="text" placeholder="Напишите свое имя" class="country__popup-input fz18">
+		</div>
+		<div class="country__popup-block fz16">
+			<p>Email</p>
+			<input type="text" placeholder="Напишите свой email" class="country__popup-input fz18">
+		</div>
+		<a href="#!" class="btn__blue btn__medium country__popup-form-btn">Отправить заявку</a>
+	</form>
+	<div class="country__popup-sent fz18">
+		<img src="../img/country-popup-sent-pic.png" alt="" class="country__popup-sent-pic">
+		<h2>Заявка отправлена</h2>
+		<p>Мы отправим уведомление, когда обменные операции станут доступны в вашей стране</p>
+		<a href="#!" class="btn__medium btn__blue country__popup-sent-btn" data-fancybox-close>Понятно</a>
+	</div>
+	<div class="modal__closed flex-center svg-contain modal_close" data-fancybox-close>
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M18.75 5.25L5.25 18.75" stroke="#6F767E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M18.75 18.75L5.25 5.25" stroke="#6F767E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+		</svg>			
+	</div>
+</div>
+<!-- Country popup end -->
     </main>
     <script src="js/libs.js"></script>
     <script src="js/index.js"></script>
