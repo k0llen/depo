@@ -3,13 +3,13 @@ document.querySelectorAll('.callback--js').forEach(function (element) {
         event.preventDefault();
         Fancybox.show([
             {
-                src: '#callback-modal',
+                src: '#intro_popup',
                 type: 'inline',
                 options: {
                     Carousel: {
                         loop: false,
                     },
-                    closeButton: 'top',
+                    closeButton: false,
                     class: 'dark-fancybox',
                     touch: false,
                 },

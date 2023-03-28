@@ -1,0 +1,31 @@
+.intro__popup {
+    border-radius: 16px;
+    position: relative;
+    max-width: 600px;
+
+    .f-button.is-close-btn {
+        display: none;
+    }
+    
+    .modal_close {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+    }
+
+    h2 {
+        margin-bottom: 16px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    p {
+        color: #6F767E;
+        margin-bottom: 32px;
+    }
+
+    &-btn {
+        text-align: center;
+        align-self: flex-start;
+    }
+}

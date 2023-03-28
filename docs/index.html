@@ -91,18 +91,7 @@
 					<h1 class="intro__title title">
 						Обменивай крипту и фиат без ограничений
 					</h1>
-					<a data-fancybox data-src="#intro_popup" class="btn__big btn__blue intro__btn">Launch app</a>
-					<div id="intro_popup" class="intro__popup" style="display: none; max-width:500px;">
-						<h2>Контент из скрытого div</h2>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim
-							vulputate eros.
-						</p>
-						<p>
-							Donec hendrerit efficitur ex vitae euismod. Maecenas ut leo vitae ipsum dictum
-							cursus vel vitae nulla.
-						</p>
-					</div>
+					<a data-fancybox data-src="#intro_popup" class="btn__big btn__blue intro__btn callback--js">Launch app</a>
 					<p>Работает на смарт-контрактах</p>
 				</div>
 				<div class="intro__pics">
@@ -3170,6 +3159,19 @@
 	</div>
 </div><!-- end callback-modal -->
 
+<!-- Intro popup start-->
+<div id="intro_popup" class="intro__popup fz18" >
+    <h2>Заголовок попапа</h2>
+    <p>Широкий спектр услуг по торговле и управлению цифровыми активами для удовлетворения разнообразных торговых потребностей. </p>
+	<a href="#!" class="btn__blue btn__medium intro__popup-btn">Button</a>
+	<div class="modal__closed flex-center svg-contain modal_close" data-fancybox-close>
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M18.75 5.25L5.25 18.75" stroke="#6F767E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M18.75 18.75L5.25 5.25" stroke="#6F767E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+		</svg>			
+	</div>
+</div>
+<!-- Intro popup end -->
     </main>
     <script src="js/libs.js"></script>
     <script src="js/index.js"></script>
