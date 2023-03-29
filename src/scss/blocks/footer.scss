@@ -46,11 +46,12 @@
             a{
                 display: block;
                 text-decoration: none;
-                overflow: inherit;
+                overflow: hidden;
+                border-radius: 50%;
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.08);
                 svg {
                     width: 40px;
                     height: 40px;
-                    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.08);
                     border-radius: 50%;
                     border: 12px solid #FFFFFF;
                     fill: #3E8BF3;
