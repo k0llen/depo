@@ -58,6 +58,7 @@ document.querySelectorAll('.country__popup-dropdown').forEach(function (dropDown
 			dropDownBtn.focus();
 			dropDownInput.value = this.dataset.value;
 			dropDownList.classList.remove('country__popup-dropdown-list--visible');
+            dropDownBtn.classList.remove('country__popup-dropdown-button--active');
 		});
 	});
 

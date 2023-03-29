@@ -3,7 +3,8 @@
     position: relative;
     max-width: 600px;
     padding: 64px 80px;
-    margin-top: -88px;  
+    margin-top: -88px;
+    display: none;
 
     .f-button.is-close-btn {
         display: none;
@@ -13,6 +14,11 @@
         position: absolute;
         top: 24px;
         right: 24px;
+        cursor: pointer;
+        transition: .3s all;
+        &:hover{
+            transform: scale(1.1);
+        }
     }
 
     h2 {
@@ -38,6 +44,7 @@
     position: relative;
     max-width: 600px;
     padding: 64px 80px;
+    display: none;
 
     .f-button.is-close-btn {
         display: none;
@@ -47,6 +54,11 @@
         position: absolute;
         top: 24px;
         right: 24px;
+        cursor: pointer;
+        transition: .3s all;
+        &:hover{
+            transform: scale(1.1);
+        }
     }
 
     h2 {
@@ -85,11 +97,8 @@
                 transition: .3s all;
             }
 
-            &:hover,
-            &:active {
-                &::after {
-                    transform: rotate(180deg);
-                }
+            &:hover {
+                color: #3E8BF3;
             }
 
         }
@@ -121,6 +130,9 @@
                 color: #6F767E;
                 transition: .3s all;
                 cursor: pointer;
+                &:hover {
+                    color: #3E8BF3;
+                }
             }
         }
 
@@ -129,6 +141,10 @@
             opacity: 1;
             visibility: visible;
             overflow: visible;
+        }
+
+        &-button--active.country__popup-dropdown-button::after {
+            transform: rotate(180deg);
         }
 
         &-input-hidden {
