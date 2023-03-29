@@ -1,7 +1,5 @@
-
-
 .intro {
-    padding-top: 74px;
+    padding-top: 162px;
     padding-bottom: 24px;
     background: #F5F9FE;
 
@@ -115,7 +113,7 @@
 
 @media screen and (max-width: 990px) {
     .intro{
-        padding-top: 32px;
+        padding-top: 120px;
         .wrapper {
             padding: 0;
         }
@@ -155,7 +153,9 @@
 }
 
 @media screen and (max-width: 550px) {
+
     .intro{
+        padding-top: 100px;
         padding-bottom: 32px;
         .wrapper-full{
             padding: 0 16px;

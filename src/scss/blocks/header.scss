@@ -1,4 +1,8 @@
 .header {
+    position: fixed;
+    width: 100%;
+    background: #FFFFFF;
+    z-index: 5;
     padding-top: 20px;
     padding-bottom: 20px;
     &__wrapper {
@@ -181,6 +185,10 @@
 
         .wrapper {
             padding: 0;
+        }
+
+        &__logo {
+            border: none;
         }
 
         &__right {
