@@ -1,4 +1,2 @@
-﻿# Сборщик для верстки
+﻿# DePo landing page (gulp)
 
-1. npm ci
-2. npm run dev
